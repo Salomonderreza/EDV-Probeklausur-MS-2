@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lehrkraft · Klausurberichte prüfen</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="lk">
+    <div class="kl-kicker">Lehrkraft</div>
+    <h1>Klausurberichte prüfen und auswerten</h1>
+    <p class="lk-note">Die PDF-Dateien werden nur hier im Browser gelesen und nirgendwohin hochgeladen. Maßgeblich ist der Prüfcode im Bericht. Wurde die PDF-Datei nachträglich verändert (z. B. Punkte überschrieben), stimmt der lesbare Text nicht mehr mit dem Code überein. Wurde der Code selbst verändert, wird er als <b>ungültig</b> markiert.</p>
+
+    <div class="lk-drop">
+      <p><b>PDF-Berichte hierher ziehen</b> (mehrere gleichzeitig möglich)</p>
+      <label class="kl-btn">Dateien auswählen …<input type="file" accept="application/pdf,.pdf" multiple hidden /></label>
+    </div>
+    <details>
+      <summary>Oder Prüfcodes von Hand einfügen</summary>
+      <textarea placeholder="K1.eyJ2Ijox… (ein oder mehrere Codes)"></textarea>
+      <div class="lk-actions"><button type="button" class="kl-btn" data-codes>Codes auswerten</button></div>
+    </details>
+
+    <div class="lk-actions">
+      <button type="button" class="kl-btn primary" data-csv disabled>Notenliste als CSV (Excel) herunterladen</button>
+      <button type="button" class="kl-btn ghost" data-clear>Liste leeren</button>
+    </div>
+    <div class="lk-out"></div>
+  </div>
+  <script src="config.js"></script>
+  <script src="util.js"></script>
+  <script src="sim-explorer.js"></script>
+  <script src="aufgaben.js"></script>
+  <script src="lehrkraft.js"></script>
+</body>
+</html>
